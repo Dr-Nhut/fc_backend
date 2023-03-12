@@ -1,0 +1,80 @@
+<div>
+  <h1 class="text-center">Sign up</h1>
+</div>
+
+<form
+  method="POST"
+  class="w-50 ml-auto mr-auto"
+  action="/account/store"
+  oninput='confirmPassword.setCustomValidity(confirmPassword.value != password.value ? "Mật khẩu không khớp!" : "")'
+>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="fullName">Fullname</label>
+    <input
+      type="text"
+      id="fullName"
+      class="form-control"
+      name="name"
+      maxlength="30"
+      required
+    />
+  </div>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="email">Email</label>
+    <input type="email" id="email" class="form-control" name="email" />
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="phone">Phone</label>
+    <input type="text" id="phone" class="form-control" name="phone" required />
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      class="form-control"
+      name="password"
+      minlength="8"
+      maxlength="16"
+      required
+    />
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="confirmPassword">Confirm Password</label>
+    <input
+      type="password"
+      id="confirmPassword"
+      class="form-control"
+      name="confirmPassword"
+      required
+    />
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="address">Address</label>
+    <input type="text" id="address" class="form-control" name="address" />
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Sign Up</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Have already an account? <a href="./">Login here</a></p>
+  </div>
+</form>
+
+<div class="content-message js-hidden">
+  <p class="mes">{{message}}</p>
+  <div class="close-message">
+    <i class="fa-solid fa-xmark"></i>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/register.js"></script>

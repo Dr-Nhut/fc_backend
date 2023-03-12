@@ -1,0 +1,12 @@
+.man-content {
+    margin: 0 auto;
+}
+
+.man-table {
+    width: 100%;
+}
+
+.man-table th,
+.man-table td {
+    border: 1px solid #ccc;
+}

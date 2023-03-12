@@ -1,0 +1,80 @@
+
+  <div class="p-er-goalkeepes">
+    <h2 class="p-er-goal">Thủ Môn</h2>
+    <hr />
+
+    <div class="p-er-container">
+      {{#each gk}}
+        <a href="/player/{{this._id}}">
+          <div class="p-er-container_content">
+            <img src={{this.avatar}} />
+            <div class="p-er-info">
+              <h2>
+                {{this.jersey_number}}
+                <br />
+                {{this.name}}
+              </h2>
+            </div>
+          </div>
+        </a> 
+      {{/each}}
+    </div>
+
+    <h2 class="p-er-goal">Hậu Vệ</h2>
+    <hr />
+
+    <div class="p-er-container">
+      {{#each df}}
+        <a href="/player/{{this._id}}">
+          <div class="p-er-container_content">
+            <img src={{this.avatar}} />
+            <div class="p-er-info">
+              <h2>
+                {{this.jersey_number}}
+                <br />
+                {{this.name}}
+              </h2>
+            </div>
+          </div>
+        </a> 
+      {{/each}}
+    </div>
+
+    <h2 class="p-er-goal">Tiền Vệ</h2>
+    <hr />
+
+    <div class="p-er-container">
+      {{#each mf}}
+        <a href="/player/{{this._id}}">
+          <div class="p-er-container_content">
+            <img src={{this.avatar}} />
+            <div class="p-er-info">
+              <h2>
+                {{this.jersey_number}}
+                <br />
+                {{this.name}}
+              </h2>
+            </div>
+          </div>
+        </a> 
+      {{/each}}
+    </div>
+
+    <h2 class="p-er-goal">Tiền Đạo</h2>
+    <hr />
+    <div class="p-er-container">
+      {{#each fw}}
+        <a href="/player/{{this._id}}">
+          <div class="p-er-container_content">
+            <img src={{this.avatar}} />
+            <div class="p-er-info">
+              <h2>
+                {{this.jersey_number}}
+                <br />
+                {{this.name}}
+              </h2>
+            </div>
+          </div>
+        </a> 
+      {{/each}}
+    </div>

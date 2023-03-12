@@ -1,0 +1,79 @@
+<div class="man-title">
+  <div>
+    <h1>Quản lý thông tin cầu thủ</h1>
+  </div>
+
+  <div>
+    <button><a href="../player-create">Thêm cầu thủ</a></button>
+  </div>
+</div>
+
+<div class="man-content">
+  <table class="man-table">
+    <thead>
+      <tr>
+        <th><input type="checkbox" /></th>
+        <th>Vị trí</th>
+        <th>Tên</th>
+        <th>Số áo</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each players}}
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>{{this.position}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.jersey_number}}</td>
+          <td>
+            <button><a href="{{this._id}}/edit"><i
+                  class="fa-sharp fa-solid fa-pen"
+                ></i></a></button>
+            <button
+              data-id="{{this._id}}"
+              data-toggle="modal"
+              data-target="#confirmDelete"
+            >
+              <i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<!-- Confirm delete button -->
+<div id="confirmDelete" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa Cầu Thủ?</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc muốn xóa thông tin cầu thủ này.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-del" type="button" class="btn btn-danger">OK</button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+        >Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form id="delete-player" method="POST"> </form>
+
+<!-- Xử lý modal xóa -->
+<script src="js/player_delete.js"></script>

@@ -1,0 +1,68 @@
+.header {
+    background-color: rgb(159, 18, 18);
+    font-size: 0.5cm;
+    padding-right: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo_mu img {
+    font-size: 1vw;
+    max-width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 250px;
+}
+
+.js_username_item {
+    position: relative;
+    padding: 8px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.js_username_item:hover .sub-user {
+    display: block;
+
+}
+
+.sub-user {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    width: 100px;
+    cursor: pointer;
+}
+
+.sub-user ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sub-user a {
+    text-decoration: none;
+    color: #000;
+}
+
+.js_username_item i,
+.js_username_item p {
+    display: inline-block;
+}
