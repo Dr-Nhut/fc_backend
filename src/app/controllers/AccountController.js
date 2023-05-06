@@ -299,9 +299,17 @@ class AccountController {
     })
   }
 
-  cancelProduct(req, res, next) {
+  cancelProductMan(req, res, next) {
     const cartId = req.query.idCart;
     Cart.findByIdAndUpdate({_id : cartId}, {product : req.product}, function(err) {
+      if (err) return handleError(err);
+        else res.redirect("back");
+    })
+  }
+
+  cancelProduct(req, res, next) {
+    const cartId = req.query.idCart;
+    Cart.findByIdAndUpdate({_id : cartId}, {product : req.result}, function(err) {
       if (err) return handleError(err);
         else res.redirect("back");
     })

@@ -166,7 +166,7 @@ router.delete(
 
 
 router.get('/order', accountController.checkLogin, cartController.getCart, cartController.index);
-router.delete('/order/:id', accountController.checkLogin, accountController.getListProduct, accountController.getAvailable, accountController.setAvailable, managerController.cancelProduct, accountController.cancelProduct);
+router.delete('/order/:id', accountController.checkLogin, accountController.getListProduct, accountController.getAvailable, accountController.setAvailable, managerController.cancelProduct, accountController.cancelProductMan);
 router.post('/order/confirm', accountController.checkLogin, cartController.confirm);
 
 router.get("/news", accountController.checkLogin, managerController.news);
